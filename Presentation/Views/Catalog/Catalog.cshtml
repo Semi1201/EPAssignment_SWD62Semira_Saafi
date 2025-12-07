@@ -1,0 +1,9 @@
+﻿@model IEnumerable<Domain.Interfaces.IItemValidating>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        var partial = item.GetCardPartial();
+        <partial name="@partial" model="item" />
+    }
+</div>
